@@ -1,0 +1,14 @@
+---
+title: "dbias"
+author: "Thore Egeland"
+date: "2022-10-26"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Purpose
+
+The purpose is
