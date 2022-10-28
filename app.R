@@ -1,6 +1,6 @@
 #
 # This is a Shiny web application designed to provide information on
-# the datasets of the R library BIAS.data
+# the datasets of the R library BIAS.data 
 #
 
 library(shiny)
@@ -12,8 +12,12 @@ datasets = data(package = "BIAS.data")$results[,3]
 ui <- fluidPage(
   
   # App title ----
-  titlePanel("Display and download from R library BIAS.data"),
-
+  titlePanel("Display and download data from BIAS.data"),
+  
+  "The purpose of this app is to display and download data from
+  the R library BIAS.data (https://github.com/thoree/BIAS.data)
+  without involving R. As such, this app is of limited interest
+  to users who have installed BIAS.data.",
   
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
@@ -27,7 +31,7 @@ ui <- fluidPage(
                   choices = datasets,
                   selected = "Audi"),
       
-      numericInput("nColumns", "No of columns to show:", 5, 1, 100),
+      numericInput("nColumns", "No of columns to show:", 5, 2, 100),
       
       # Button
       downloadButton("downloadData", "Download")
